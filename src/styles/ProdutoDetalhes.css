@@ -1,141 +1,136 @@
 /* src/styles/ProdutoDetalhes.css */
-
-body {
-  background-color: #f8f9fa;
-}
-
-.produto-detalhes {
+.detalhes-container {
   display: flex;
   justify-content: center;
-  padding: 50px 20px;
+  padding: 40px;
 }
 
-.card {
-  background-color: white;
+.detalhes-card {
   display: flex;
-  flex-direction: row;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 1100px;
-  width: 100%;
-  gap: 30px;
-  padding: 30px;
-}
-
-.imagem {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.imagem img {
-  max-width: 100%;
-  max-height: 500px;
+  background-color: #c181fa;
   border-radius: 12px;
-  object-fit: cover;
-}
-
-.info {
-  flex: 1.5;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
   gap: 20px;
 }
 
-.info h1 {
-  font-size: 2rem;
+/* Imagem na esquerda */
+.detalhes-imagem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.detalhes-imagem img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+/* Descrição no meio */
+.detalhes-descricao {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px; /* Move mais para a direita */
+}
+.detalhes-descricao h2 {
+  margin-bottom: 10px;
+}
+.detalhes-descricao p {
+  font-size: 16px;
   color: #333;
 }
 
-.descricao {
-  font-size: 1rem;
-  color: #555;
+/* Caixa de compra na direita */
+.detalhes-compra {
+  flex: 1.2;
+  background-color: #690089;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.preco {
-  font-size: 1.4rem;
-  color: #00a86b;
+/* Nome do Produto */
+.nome-produto {
+  font-size: 18px;
+  color: white;
   font-weight: bold;
 }
 
-.compra {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: #f0f0f5;
-  padding: 20px;
-  border-radius: 12px;
-}
-
-.quantidade {
+/* Controle de quantidade */
+.quantidade-control {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.quantidade button {
-  background-color: #ff6961;
-  color: white;
-  border: none;
+.quantidade-control button {
   padding: 8px 16px;
-  font-size: 20px;
-  border-radius: 8px;
+  font-size: 22px;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #e04f4f;
+  color: white;
   transition: background-color 0.3s;
 }
-.quantidade button:hover {
-  background-color: #d44d4d;
+.quantidade-control button:hover {
+  background-color: #c90000;
 }
-.quantidade span {
-  font-size: 20px;
+.quantidade-control span {
+  font-size: 22px;
   min-width: 24px;
   text-align: center;
-  color: #333;
+  color: white; /* 🔥 Número branco */
 }
 
+/* Total */
 .total {
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.btn {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
+  font-size: 24px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.adicionar {
-  background-color: #ffc107;
-}
-.adicionar:hover {
-  background-color: #e0a800;
-}
-
-.voltar {
-  background-color: #6c63ff;
   color: white;
 }
-.voltar:hover {
-  background-color: #5548e6;
+
+/* Botões de ação */
+.botoes-acoes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 }
 
-.not-found {
-  padding: 50px;
-  text-align: center;
-  color: red;
-  font-size: 1.5rem;
+/* Botão Adicionar */
+.botao-adicionar {
+  background-color: #ffb300;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+.botao-adicionar:hover {
+  background-color: #ffa000;
 }
 
-/* 🔥 Responsivo */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .imagem img {
-    max-height: 300px;
-  }
+/* Botão Voltar */
+.botao-voltar {
+  background-color: #8626c5;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+}
+.botao-voltar:hover {
+  background-color: #943ef5;
 }
