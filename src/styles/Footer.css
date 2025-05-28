@@ -1,0 +1,10 @@
+/* FOOTER */
+.home-footer {
+  width: 100%;
+  box-sizing: border-box; /* 🔥 ESSENCIAL! */
+  padding: 20px;
+  text-align: center;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}

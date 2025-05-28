@@ -1,0 +1,175 @@
+.carrinho-container {
+  padding: 20px;
+  color: white;
+}
+
+.carrinho-conteudo {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Área dos itens */
+.carrinho-itens {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Card do produto */
+.carrinho-card {
+  display: flex;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 15px;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Imagem */
+.carrinho-card-imagem {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Área das infos */
+.carrinho-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.info-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-esquerda h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.info-direita {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Quantidade */
+.carrinho-quantidade {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carrinho-quantidade button {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrinho-quantidade button:hover {
+  background-color: #333;
+}
+
+.carrinho-quantidade button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.preco-total {
+  color: #00ffaa;
+  font-weight: bold;
+  min-width: 100px;
+  text-align: right;
+}
+
+/* Botão remover */
+.botao-remover {
+  background-color: #690089;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-remover:hover {
+  background-color: #8a00b8;
+}
+
+/* Área total */
+.carrinho-total {
+  flex: 1;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  height: fit-content;
+}
+
+.carrinho-total h2 {
+  margin-bottom: 15px;
+}
+
+.botao-finalizar,
+.botao-voltar {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: teal;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-finalizar:hover,
+.botao-voltar:hover {
+  background-color: #008080;
+}
+
+/* Carrinho vazio */
+.carrinho-vazio {
+  text-align: center;
+  background-color: #222;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.carrinho-vazio p {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.carrinho-vazio .botao-voltar {
+  padding: 10px 20px;
+  position: relative;
+  margin-left: 450px;
+  width: 25%;
+  background-color: #690089;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrinho-vazio .botao-voltar:hover {
+  background-color: #8a00b8;
+}

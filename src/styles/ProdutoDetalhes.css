@@ -1,0 +1,136 @@
+/* src/styles/ProdutoDetalhes.css */
+.detalhes-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.detalhes-card {
+  display: flex;
+  background-color: #c181fa;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Imagem na esquerda */
+.detalhes-imagem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.detalhes-imagem img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+/* Descrição no meio */
+.detalhes-descricao {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px; /* Move mais para a direita */
+}
+.detalhes-descricao h2 {
+  margin-bottom: 10px;
+}
+.detalhes-descricao p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Caixa de compra na direita */
+.detalhes-compra {
+  flex: 1.2;
+  background-color: #690089;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Nome do Produto */
+.nome-produto {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Controle de quantidade */
+.quantidade-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.quantidade-control button {
+  padding: 8px 16px;
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #e04f4f;
+  color: white;
+  transition: background-color 0.3s;
+}
+.quantidade-control button:hover {
+  background-color: #c90000;
+}
+.quantidade-control span {
+  font-size: 22px;
+  min-width: 24px;
+  text-align: center;
+  color: white; /* 🔥 Número branco */
+}
+
+/* Total */
+.total {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Botões de ação */
+.botoes-acoes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Botão Adicionar */
+.botao-adicionar {
+  background-color: #ffb300;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+.botao-adicionar:hover {
+  background-color: #ffa000;
+}
+
+/* Botão Voltar */
+.botao-voltar {
+  background-color: #8626c5;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+}
+.botao-voltar:hover {
+  background-color: #943ef5;
+}
