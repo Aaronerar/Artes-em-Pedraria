@@ -32,7 +32,7 @@ function ProdutoDetalhes() {
   }
 
   function handleAdicionarAoCarrinho() {
-    // Garantia extra para o TypeScript (mesmo que já checado acima)
+    
     if (!produto) return;
 
     for (let i = 0; i < quantidade; i++) {
