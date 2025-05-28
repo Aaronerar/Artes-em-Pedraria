@@ -16,61 +16,51 @@ function ProdutoDetalhes() {
 
   if (!produto) {
     toast.error('Produto não encontrado!');
-    return <p>Produto não encontrado.</p>;
+    return <div className="not-found">Produto não encontrado.</div>;
   }
 
   const total = (produto.preco * quantidade).toFixed(2);
 
-  function handleIncrementar() {
-    setQuantidade((prev) => prev + 1);
-  }
+  const incrementar = () => setQuantidade((q) => q + 1);
+  const decrementar = () => setQuantidade((q) => (q > 1 ? q - 1 : 1));
 
-  function handleDecrementar() {
-    setQuantidade((prev) => (prev > 1 ? prev - 1 : 1));
-  }
-
-  function handleAdicionarAoCarrinho() {
+  const adicionarAoCarrinho = () => {
     for (let i = 0; i < quantidade; i++) {
-      addToCart(produto!);
+      addToCart(produto);
     }
-    toast.success(`"${produto!.nome}" adicionado ao carrinho!`);
+    toast.success(`"${produto.nome}" adicionado ao carrinho!`);
     navigate('/carrinho');
-  }
+  };
 
   return (
-    <div className="detalhes-container">
-      <div className="detalhes-card">
-        
-        {/* 📷 Imagem */}
-        <div className="detalhes-imagem">
+    <div className="produto-detalhes">
+      <div className="card">
+
+        <div className="imagem">
           <img src={produto.imagem} alt={produto.nome} />
         </div>
 
-        {/* 📝 Descrição */}
-        <div className="detalhes-descricao">
-          <h2>{produto.nome}</h2>
-          <p>{produto.descricao}</p>
-        </div>
+        <div className="info">
+          <h1>{produto.nome}</h1>
+          <p className="descricao">{produto.descricao}</p>
+          <p className="preco">R$ {produto.preco.toFixed(2)}</p>
 
-        {/* 🛒 Caixa de compra */}
-        <div className="detalhes-compra">
-          <p className="nome-produto">{produto.nome}</p>
+          <div className="compra">
+            <div className="quantidade">
+              <button onClick={decrementar}>-</button>
+              <span>{quantidade}</span>
+              <button onClick={incrementar}>+</button>
+            </div>
 
-          <div className="quantidade-control">
-            <button onClick={handleDecrementar}>-</button>
-            <span>{quantidade}</span>
-            <button onClick={handleIncrementar}>+</button>
-          </div>
+            <p className="total">
+              Total: <strong>R$ {total}</strong>
+            </p>
 
-          <p className="total">
-            Total: <strong>R$ {total}</strong>
-          </p>
-
-          <div className="botoes-acoes">
-            <button className="botao-adicionar" onClick={handleAdicionarAoCarrinho}>
+            <button className="btn adicionar" onClick={adicionarAoCarrinho}>
               Adicionar ao Carrinho
             </button>
-            <button className="botao-voltar" onClick={() => navigate('/produtos')}>
+
+            <button className="btn voltar" onClick={() => navigate('/produtos')}>
               Voltar aos Produtos
             </button>
           </div>

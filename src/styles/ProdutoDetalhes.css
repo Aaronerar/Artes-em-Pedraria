@@ -1,136 +1,141 @@
 /* src/styles/ProdutoDetalhes.css */
-.detalhes-container {
+
+body {
+  background-color: #f8f9fa;
+}
+
+.produto-detalhes {
   display: flex;
   justify-content: center;
-  padding: 40px;
+  padding: 50px 20px;
 }
 
-.detalhes-card {
+.card {
+  background-color: white;
   display: flex;
-  background-color: #c181fa;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  flex-direction: row;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
-  padding: 20px;
-  gap: 20px;
+  gap: 30px;
+  padding: 30px;
 }
 
-/* Imagem na esquerda */
-.detalhes-imagem {
+.imagem {
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
-.detalhes-imagem img {
+.imagem img {
   max-width: 100%;
   max-height: 500px;
-  border-radius: 8px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-/* Descrição no meio */
-.detalhes-descricao {
-  flex: 2;
+.info {
+  flex: 1.5;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  margin-left: 20px; /* Move mais para a direita */
+  gap: 20px;
 }
-.detalhes-descricao h2 {
-  margin-bottom: 10px;
-}
-.detalhes-descricao p {
-  font-size: 16px;
+
+.info h1 {
+  font-size: 2rem;
   color: #333;
 }
 
-/* Caixa de compra na direita */
-.detalhes-compra {
-  flex: 1.2;
-  background-color: #690089;
-  border-radius: 8px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+.descricao {
+  font-size: 1rem;
+  color: #555;
 }
 
-/* Nome do Produto */
-.nome-produto {
-  font-size: 18px;
-  color: white;
+.preco {
+  font-size: 1.4rem;
+  color: #00a86b;
   font-weight: bold;
 }
 
-/* Controle de quantidade */
-.quantidade-control {
+.compra {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f0f0f5;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.quantidade {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.quantidade-control button {
-  padding: 8px 16px;
-  font-size: 22px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  background-color: #e04f4f;
+.quantidade button {
+  background-color: #ff6961;
   color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
   transition: background-color 0.3s;
 }
-.quantidade-control button:hover {
-  background-color: #c90000;
+.quantidade button:hover {
+  background-color: #d44d4d;
 }
-.quantidade-control span {
-  font-size: 22px;
+.quantidade span {
+  font-size: 20px;
   min-width: 24px;
   text-align: center;
-  color: white; /* 🔥 Número branco */
+  color: #333;
 }
 
-/* Total */
 .total {
-  font-size: 24px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.adicionar {
+  background-color: #ffc107;
+}
+.adicionar:hover {
+  background-color: #e0a800;
+}
+
+.voltar {
+  background-color: #6c63ff;
   color: white;
 }
-
-/* Botões de ação */
-.botoes-acoes {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 10px;
+.voltar:hover {
+  background-color: #5548e6;
 }
 
-/* Botão Adicionar */
-.botao-adicionar {
-  background-color: #ffb300;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-}
-.botao-adicionar:hover {
-  background-color: #ffa000;
+.not-found {
+  padding: 50px;
+  text-align: center;
+  color: red;
+  font-size: 1.5rem;
 }
 
-/* Botão Voltar */
-.botao-voltar {
-  background-color: #8626c5;
-  border: none;
-  padding: 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  color: white;
-  width: 100%;
-}
-.botao-voltar:hover {
-  background-color: #943ef5;
+/* 🔥 Responsivo */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .imagem img {
+    max-height: 300px;
+  }
 }
