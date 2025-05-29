@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 20px; /* Move mais para a direita */
+  margin-left: 20px;
 }
 .detalhes-descricao h2 {
   margin-bottom: 10px;
@@ -88,7 +88,7 @@
   font-size: 22px;
   min-width: 24px;
   text-align: center;
-  color: white; /* 🔥 Número branco */
+  color: white;
 }
 
 /* Total */
@@ -120,8 +120,8 @@
   background-color: #ffa000;
 }
 
-/* Botão Voltar */
-.botao-voltar {
+/* Botão Voltar (exclusivo deste componente) */
+.botao-voltar-detalhes {
   background-color: #8626c5;
   border: none;
   padding: 12px;
@@ -131,6 +131,6 @@
   color: white;
   width: 100%;
 }
-.botao-voltar:hover {
+.botao-voltar-detalhes:hover {
   background-color: #943ef5;
 }

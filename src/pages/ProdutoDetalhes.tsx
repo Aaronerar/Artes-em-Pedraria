@@ -12,10 +12,8 @@ function ProdutoDetalhes() {
   const { addToCart } = useCart();
   const [quantidade, setQuantidade] = useState(1);
 
-  // Busca o produto pelo id (Number)
   const produto = produtos.find((item) => item.id === Number(id));
 
-  // Se não achar o produto, mostra erro e retorna
   if (!produto) {
     toast.error('Produto não encontrado!');
     return <p>Produto não encontrado.</p>;
@@ -32,7 +30,6 @@ function ProdutoDetalhes() {
   }
 
   function handleAdicionarAoCarrinho() {
-    
     if (!produto) return;
 
     for (let i = 0; i < quantidade; i++) {
@@ -45,19 +42,15 @@ function ProdutoDetalhes() {
   return (
     <div className="detalhes-container">
       <div className="detalhes-card">
-
-        {/* 📷 Imagem */}
         <div className="detalhes-imagem">
           <img src={produto.imagem} alt={produto.nome} />
         </div>
 
-        {/* 📝 Descrição */}
         <div className="detalhes-descricao">
           <h2>{produto.nome}</h2>
           <p>{produto.descricao}</p>
         </div>
 
-        {/* 🛒 Caixa de compra */}
         <div className="detalhes-compra">
           <p className="nome-produto">{produto.nome}</p>
 
@@ -75,7 +68,7 @@ function ProdutoDetalhes() {
             <button className="botao-adicionar" onClick={handleAdicionarAoCarrinho}>
               Adicionar ao Carrinho
             </button>
-            <button className="botao-voltar" onClick={() => navigate('/produtos')}>
+            <button className="botao-voltar-detalhes" onClick={() => navigate('/produtos')}>
               Voltar aos Produtos
             </button>
           </div>
